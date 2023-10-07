@@ -1,0 +1,18 @@
+# you may want to use the creation of pull requests as a trigger for GitHub Actions workflows. For example, whenever someone makes changes to the code, you'll want to run some code quality checks.
+# Only when the edited code has passed the quality checks and someone has verified the proposed changes, do you want to actually merge the pull request.
+# If you want a workflow to run whenever a pull request is merged, you'll need to use another trigger. 
+# Merging a pull request is essentially a push to the main branch. So, to trigger a workflow to run when a pull request is merged, use the following trigger in the GitHub Actions workflow:
+
+name: Trigger a workflow to run when a pull request is merged 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pull request
+      run: echo "Checking how pull request works."
