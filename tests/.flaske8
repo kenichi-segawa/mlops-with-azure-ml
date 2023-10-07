@@ -1,0 +1,22 @@
+# Lint your code
+# The quality of your code depends on the standards you and your team agree on. To ensure that the agreed upon quality is met, you can run linters that will check whether the code conforms to the standards of the team.
+# Depending on the code language you use, there are several options to lint your code. For example, if you work with Python, you can use either Flake8 or Pylint.
+
+# You can run the linter automatically with GitHub Actions. The agent provided by platform will run the linter when you:
+
+# Create a configuration file .flake8 and store the file in your repo.
+# Define the continuous integration workflow in YAML.
+# As a task or step, install Flake8 with python -m pip install flake8.
+# As a task or step, run the flake8 command to lint your code.
+
+[flake8]
+ignore = 
+    W504,
+    C901,
+    E41
+max-line-length = 79
+exclude = 
+    .git,
+    .cache,
+max-complexity = 10
+import-order-style = pep8
