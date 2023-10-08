@@ -18,7 +18,7 @@ jobs:
       - name: set current directory
         run: cd src
       - name: Create endpoint
-        run: az ml online-endpoint create --name price-prediction-ep -f src/create-endpoint.yaml --resource-group cal-569-855 --workspace-name mlw8537
+        run: az ml online-endpoint update --name price-prediction-ep -f src/create-endpoint.yaml --resource-group cal-569-855 --workspace-name mlw8537
   deploy:
     name: deploy model
     needs: create
