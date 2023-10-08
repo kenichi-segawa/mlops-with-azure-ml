@@ -35,4 +35,4 @@ jobs:
       - name: set current directory
         run: cd src
       - name: deploy model
-        run: az ml online-deployment update --name mlflow-deployment --endpoint price-prediction-ep -f src/mlflow-deployment.yaml --resource-group cal-569-855 --workspace-name mlw8537 --all-traffic
+        run: az ml online-deployment update --name mlflow-deployment --endpoint price-prediction-ep -f src/mlflow-deployment.yaml --resource-group cal-569-855 --workspace-name mlw8537
